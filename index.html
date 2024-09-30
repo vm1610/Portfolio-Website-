@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasu Manocha - Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #8B0000;
+            --secondary-color: #FF6347;
+            --background-color: #FFF5EE;
+            --text-color: #333;
+            --card-bg-color: #FFF;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        header {
+            background: var(--primary-color);
+            color: var(--card-bg-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            padding: 0 1rem;
+        }
+        nav ul li a {
+            color: var(--card-bg-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        main {
+            padding-top: 80px;
+        }
+        section {
+            padding: 3rem 0;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--card-bg-color);
+            text-align: center;
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: var(--card-bg-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        .card p {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .card ul {
+            list-style-position: inside;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+        .github-link {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--card-bg-color);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        .github-link:hover {
+            background-color: var(--primary-color);
+        }
+        footer {
+            background: var(--primary-color);
+            color: var(--card-bg-color);
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 1rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Vasu Manocha</h1>
+            <nav>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Computer Science & Applied Mathematics student</h2>
+                <p>While others engage in leisure activities, I immerse myself in coding mathematical models. It's a passion I wholeheartedly embrace.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">Innovative Projects</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Face Recognition System</h3>
+                        <ul>
+                            <li>Advanced face detection and identity matching</li>
+                            <li>Utilizes state-of-the-art computer vision techniques</li>
+                        </ul>
+                        <a href="https://github.com/vm1610/Projects/tree/main/Face%20Recog" class="github-link" target="_blank">Explore on GitHub</a>
+                    </div>
+                    <div class="card">
+                        <h3>Lucy Voice Assistant</h3>
+                        <ul>
+                            <li>Cloud-based voice service with natural language processing</li>
+                            <li>Seamless integration with various cloud services</li>
+                        </ul>
+                        <a href="https://github.com/vm1610/Projects/tree/main/Lucy%20Voice%20Recog" class="github-link" target="_blank">Explore on GitHub</a>
+                    </div>
+                    <div class="card">
+                        <h3>Mathematical Research Papers</h3>
+                        <ul>
+                            <li>Four in-depth papers on Applied and Pure Mathematics</li>
+                            <li>Exploration of complex mathematical concepts and applications</li>
+                        </ul>
+                        <a href="https://github.com/vm1610/Projects/tree/main/Math%20research%20papers" class="github-link" target="_blank">Read on GitHub</a>
+                    </div>
+                    <div class="card">
+                        <h3>Netflix UI Clone</h3>
+                        <ul>
+                            <li>Faithful recreation of Netflix's sleek interface</li>
+                            <li>Implemented responsive design and media playback features</li>
+                        </ul>
+                        <a href="https://github.com/vm1610/Projects/tree/main/Netflix%20Clone" class="github-link" target="_blank">View Project</a>
+                    </div>
+                    <div class="card">
+                        <h3>Classic Snake Game</h3>
+                        <ul>
+                            <li>Modern take on the timeless Snake game</li>
+                            <li>Features smooth controls and score tracking</li>
+                        </ul>
+                        <a href="https://github.com/vm1610/Projects/tree/main/Snake%20Game" class="github-link" target="_blank">Play on GitHub</a>
+                    </div>
+                    <div class="card">
+                        <h3>Tic Tac Toe</h3>
+                        <ul>
+                            <li>Interactive two-player Tic Tac Toe game</li>
+                            <li>Intelligent win and draw condition detection</li>
+                        </ul>
+                        <a href="https://github.com/vm1610/Projects/tree/main/Tic%20Tac%20Toe" class="github-link" target="_blank">Challenge on GitHub</a>
+                    </div>
+                    <div class="card">
+                        <h3>eVerify Email Validator</h3>
+                        <ul>
+                            <li>Robust email validation tool with intuitive UI</li>
+                            <li>Comprehensive checks for email format and validity</li>
+                        </ul>
+                        <a href="https://github.com/vm1610/Projects/tree/main/eVerify%20Email%20Validator" class="github-link" target="_blank">Try on GitHub</a>
+                    </div>
+                    <div class="card">
+                        <h3>Snake and Ladder Game</h3>
+                        <ul>
+                            <li>Python implementation of the classic board game</li>
+                            <li>Supports 2-4 players with realistic game mechanics</li>
+                        </ul>
+                        <a href="https://github.com/vm1610/Projects/tree/main/snake%20and%20ladder" class="github-link" target="_blank">Roll on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title">Professional Journey</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Backend Developer Intern (ML), Neural Tech</h3>
+                        <p>May 2024 - June 2024</p>
+                        <ul>
+                            <li>Developed and maintained backend infrastructure for ML models</li>
+                            <li>Implemented data preprocessing pipelines and model integration</li>
+                            <li>Optimized model performance and ensured accuracy through testing</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Marking Assistant, Memorial University</h3>
+                        <p>September 2023 - May 2024</p>
+                        <ul>
+                            <li>Graded assignments and midterms for various undergraduate math courses</li>
+                            <li>Provided constructive feedback to students to improve their understanding</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Undergraduate Research Assistant, Memorial University</h3>
+                        <p>May 2023 - September 2023</p>
+                        <ul>
+                            <li>Investigated the 'Cops and Robbers' problem on directed circulant graphs</li>
+                            <li>Developed a unique theorem to contribute to the problem's solution</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Undergraduate Teaching Assistant, Memorial University</h3>
+                        <p>January 2023 - Present</p>
+                        <ul>
+                            <li>Provide math support to undergraduate students in the Math Help Center</li>
+                            <li>Assist in clarifying complex mathematical concepts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vasu Manocha.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
